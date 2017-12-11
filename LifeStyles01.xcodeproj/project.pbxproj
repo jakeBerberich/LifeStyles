@@ -12,6 +12,11 @@
 		0025C61A1FD2C32000082854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0025C6181FD2C32000082854 /* Main.storyboard */; };
 		0025C61C1FD2C32000082854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0025C61B1FD2C32000082854 /* Assets.xcassets */; };
 		0025C61F1FD2C32000082854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0025C61D1FD2C32000082854 /* LaunchScreen.storyboard */; };
+		0025C6281FD319CE00082854 /* valueLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025C6271FD319CE00082854 /* valueLists.swift */; };
+		003632411FDB206300FB439A /* LifeStyleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0036323F1FDB206300FB439A /* LifeStyleModel.xcdatamodeld */; };
+		003632501FDC31CC00FB439A /* MetricVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036324F1FDC31CC00FB439A /* MetricVC.swift */; };
+		003632521FDC4A0400FB439A /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003632511FDC4A0400FB439A /* DatePickerVC.swift */; };
+		00F063E51FDC743300EFDC73 /* mmBusinessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F063E41FDC743300EFDC73 /* mmBusinessObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,12 @@
 		0025C61B1FD2C32000082854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0025C61E1FD2C32000082854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0025C6201FD2C32000082854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0025C6271FD319CE00082854 /* valueLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valueLists.swift; sourceTree = "<group>"; };
+		0036323E1FDB203100FB439A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		003632401FDB206300FB439A /* LifeStyleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LifeStyleModel.xcdatamodel; sourceTree = "<group>"; };
+		0036324F1FDC31CC00FB439A /* MetricVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricVC.swift; sourceTree = "<group>"; };
+		003632511FDC4A0400FB439A /* DatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
+		00F063E41FDC743300EFDC73 /* mmBusinessObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mmBusinessObject.swift; path = ../../../../mmBusinessObjects/mmBusinessObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,8 +49,10 @@
 		0025C6081FD2C32000082854 = {
 			isa = PBXGroup;
 			children = (
+				003632421FDC092400FB439A /* ViewControllers */,
 				0025C6131FD2C32000082854 /* LifeStyles01 */,
 				0025C6121FD2C32000082854 /* Products */,
+				0036323D1FDB203100FB439A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +68,41 @@
 			isa = PBXGroup;
 			children = (
 				0025C6141FD2C32000082854 /* AppDelegate.swift */,
-				0025C6161FD2C32000082854 /* ViewController.swift */,
 				0025C6181FD2C32000082854 /* Main.storyboard */,
 				0025C61B1FD2C32000082854 /* Assets.xcassets */,
 				0025C61D1FD2C32000082854 /* LaunchScreen.storyboard */,
 				0025C6201FD2C32000082854 /* Info.plist */,
+				0025C6261FD3199C00082854 /* Models */,
 			);
 			path = LifeStyles01;
+			sourceTree = "<group>";
+		};
+		0025C6261FD3199C00082854 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00F063E41FDC743300EFDC73 /* mmBusinessObject.swift */,
+				0025C6271FD319CE00082854 /* valueLists.swift */,
+				0036323F1FDB206300FB439A /* LifeStyleModel.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0036323D1FDB203100FB439A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0036323E1FDB203100FB439A /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		003632421FDC092400FB439A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0025C6161FD2C32000082854 /* ViewController.swift */,
+				0036324F1FDC31CC00FB439A /* MetricVC.swift */,
+				003632511FDC4A0400FB439A /* DatePickerVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0025C6281FD319CE00082854 /* valueLists.swift in Sources */,
+				003632501FDC31CC00FB439A /* MetricVC.swift in Sources */,
+				003632411FDB206300FB439A /* LifeStyleModel.xcdatamodeld in Sources */,
 				0025C6171FD2C32000082854 /* ViewController.swift in Sources */,
+				003632521FDC4A0400FB439A /* DatePickerVC.swift in Sources */,
+				00F063E51FDC743300EFDC73 /* mmBusinessObject.swift in Sources */,
 				0025C6151FD2C32000082854 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +368,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0036323F1FDB206300FB439A /* LifeStyleModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				003632401FDB206300FB439A /* LifeStyleModel.xcdatamodel */,
+			);
+			currentVersion = 003632401FDB206300FB439A /* LifeStyleModel.xcdatamodel */;
+			path = LifeStyleModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0025C6091FD2C32000082854 /* Project object */;
 }
